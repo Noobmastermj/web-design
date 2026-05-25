@@ -109,7 +109,6 @@ tailwind.config = { darkMode: 'class', theme: { extend: {
   // 1. Fetch Main Page Data
   (async () => {
     try {
-      // Look here! It asks for the 'medieval' slug from your database
       const { data: page, error } = await supabase.from('pages').select('*').eq('slug', 'medieval').single();
       
       const contentContainer = document.getElementById('dynamic-page-content');
